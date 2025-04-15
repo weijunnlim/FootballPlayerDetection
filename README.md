@@ -11,7 +11,7 @@ The goal is to create a simplified yet effective object detection system for spo
 
 ## 📽️ Demo
 
-https://youtu.be/RplGhfxSA4I
+[![Watch the video](https://img.youtube.com/vi/RplGhfxSA4I/0.jpg)](https://youtu.be/RplGhfxSA4I)
 
 ---
 
