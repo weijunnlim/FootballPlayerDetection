@@ -50,9 +50,9 @@ def get_players_boxes(result):
   players_imgs = []
   players_boxes = []
   for box in result.boxes:
-    label = int(box.cls.numpy()[0])
+    label = int(box.cls.cpu().numpy()[0])
     if label == 0:
-      x1, y1, x2, y2 = map(int, box.xyxy[0].numpy())
+      x1, y1, x2, y2 = map(int, box.xyxy[0].cpu().numpy())
       player_img = result.orig_img[y1: y2, x1: x2]
       players_imgs.append(player_img)
       players_boxes.append(box)
@@ -159,7 +159,7 @@ def get_left_team_label(players_boxes, kits_colors, kits_clf):
   team_1 = []
 
   for i in range(len(players_boxes)):
-    x1, y1, x2, y2 = map(int, players_boxes[i].xyxy[0].numpy())
+    x1, y1, x2, y2 = map(int, players_boxes[i].xyxy[0].cpu().numpy())
 
     team = classify_kits(kits_clf, [kits_colors[i]]).item()
     if team==0:
@@ -224,8 +224,8 @@ def annotate_video(video_path, model):
                 grass_hsv = cv2.cvtColor(np.uint8([[list(grass_color)]]), cv2.COLOR_BGR2HSV)
 
             for box in result.boxes:
-                label = int(box.cls.numpy()[0])
-                x1, y1, x2, y2 = map(int, box.xyxy[0].numpy())
+                label = int(box.cls.cpu().numpy()[0])
+                x1, y1, x2, y2 = map(int, box.xyxy[0].cpu().numpy())
 
                 # If the box contains a player, find to which team he belongs
                 if label == 0:
@@ -275,6 +275,6 @@ if __name__ == "__main__":
         "6": (217, 89, 204),
         "7": (22, 11, 15)
     }
-    model = YOLO("./weights/last.pt")
+    model = YOLO("datasets/runs/detect/train2/weights/best.pt")
     video_path = sys.argv[1]
     annotate_video(video_path, model)
