@@ -24,9 +24,7 @@ _(Demo coming soon or to be added here)_
 git clone https://github.com/weijunnlim/Player-Ball-Detection.git
 cd Player-Ball-Detection
 pip install -r requirements.txt
-</details>
-
-<details><summary>Inference on video</summary>
+</details> <details> <summary><strong>Run Inference on Video</strong></summary>
 
 To run the model on a video, run the following command: 
 ```
