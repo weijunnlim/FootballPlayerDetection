@@ -11,8 +11,7 @@ The goal is to create a simplified yet effective object detection system for spo
 
 ## 📽️ Demo
 
-[https://github.com/weijunnlim/FootballPlayerDetection/blob/08fc1e0a537c141b6b6451fb81089b2dc218d9fb/output/Video4.MP4](https://github.com/weijunnlim/FootballPlayerDetection/blob/c3c9daeb0aa92da45282d525329648c7ca85d11a/output/Video_4.mp4)
-
+https://youtu.be/RplGhfxSA4I
 
 ---
 
