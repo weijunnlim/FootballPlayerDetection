@@ -24,6 +24,7 @@ _(Demo coming soon or to be added here)_
 git clone https://github.com/weijunnlim/Player-Ball-Detection.git
 cd Player-Ball-Detection
 pip install -r requirements.txt
+</details>
 
 <details><summary>Inference on video</summary>
 
@@ -62,7 +63,16 @@ Make sure your dataset is properly annotated in YOLO format before training.
 python results.py
 ```
 This script displays the mAP@50 scores for both Player and Ball classes.
+
 </details>
+
+# Dataset Annotation
+
+The original dataset contains 24 classes. This project simplifies them into two:
+
+Class 1–22 → Player (0)
+Class 23 → Ball (1)
+To convert the dataset, run:
 
 
 
