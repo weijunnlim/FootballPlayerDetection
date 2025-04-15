@@ -74,7 +74,9 @@ This script displays the mAP@50 scores for both Player and Ball classes.
 The original dataset contains 23 classes. This project simplifies them into two:
 
 Class 1–22 → Player (0)
+
 Class 23 → Ball (1)
+
 To convert the dataset, run:
 
 ```bash
