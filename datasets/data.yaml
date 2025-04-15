@@ -1,0 +1,8 @@
+path: dataset  # path to your dataset root
+train: train/images
+val: val/images
+
+nc: 2  # number of classes (adjust accordingly)
+names:
+  0: player
+  1: ball
